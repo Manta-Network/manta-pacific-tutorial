@@ -65,7 +65,7 @@ await proveWithdrawMessage(withdrawTxhash);
 await finalizeWithdrawMessage(withdrawTxhash);
 ```
 
-#### Bridge history
+#### Bridge History
 
 - Check history and status on SocialScan
   - Mainnet: https://manta.socialscan.io/address/${address}#exitTxns
@@ -74,6 +74,8 @@ await finalizeWithdrawMessage(withdrawTxhash);
   - Mainnet: https://api.w3w.ai/manta-pacific/v1/explorer/l2_to_l1_transactions?address=${address}
   - Testnet: https://api.w3w.ai/manta-sepolia-testnet/v2/explorer/l2_to_l1_transactions?address=${address}
 
+
+#### Withdraw Status
 
 ```typescript
 export enum WithdrawStatus {
