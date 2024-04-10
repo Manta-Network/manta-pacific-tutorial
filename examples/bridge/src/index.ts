@@ -57,7 +57,7 @@ export async function depositETH() {
   const tx = await messenger.depositETH(ethers.utils.parseEther("0.001"));
   console.log(`depositETH txHash: ${tx?.hash}`);
   await tx.wait();
-  await sleep(1000 * 120);
+  await sleep(1000 * 360);
   await messenger.waitForMessageStatus(tx, MessageStatus.RELAYED);
   console.log("Deposit ETH complete");
 }
@@ -74,7 +74,7 @@ export async function depositERC20() {
   );
   console.log(`depositERC20 txHash: ${tx?.hash}`);
   await tx.wait();
-  await sleep(1000 * 120);
+  await sleep(1000 * 360);
   await messenger.waitForMessageStatus(tx, MessageStatus.RELAYED);
   console.log("Deposit ERC20 token complete");
 }
@@ -83,7 +83,7 @@ export async function withdrawETH() {
   const tx = await messenger.withdrawETH(ethers.utils.parseEther("0.0001"));
   console.log(`withdrawETH txHash: ${tx?.hash}`);
   await tx.wait();
-  await sleep(1000 * 120);
+  await sleep(1000 * 360);
   await messenger.waitForMessageStatus(tx, MessageStatus.READY_TO_PROVE);
   console.log("Withdraw ETH initialized");
   return tx.hash;
@@ -100,7 +100,7 @@ export async function withdrawERC20() {
   );
   console.log(`withdrawERC20 txHash: ${tx?.hash}`);
   await tx.wait();
-  await sleep(1000 * 120);
+  await sleep(1000 * 360);
   await messenger.waitForMessageStatus(tx, MessageStatus.READY_TO_PROVE);
   console.log("Deposit ERC20 token initialized");
   return tx.hash;
