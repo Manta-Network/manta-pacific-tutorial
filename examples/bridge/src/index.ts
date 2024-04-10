@@ -136,7 +136,6 @@ async function main() {
   // await depositERC20();
 
   // const withdrawTxhash = await withdrawETH();
-  // const withdrawTxhash = "0x8ac67d89c1c1d68bb1b43d70171da9b0e9e60031f679b84fbcff21e8f4d11cd1";
 
   // await proveWithdrawMessage(withdrawTxhash);
 
