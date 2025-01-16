@@ -1,9 +1,10 @@
 import { ethers } from "ethers";
 import { asL2Provider } from "@constellation-labs/bedrock-sdk";
+import { defaultMantaPacificMainnetRpc } from "./utils";
 
 async function main() {
   const l2RpcProvider = asL2Provider(
-    new ethers.providers.JsonRpcProvider("https://manta-pacific.drpc.org")
+    new ethers.providers.JsonRpcProvider(defaultMantaPacificMainnetRpc)
   );
 
   const tx = {
